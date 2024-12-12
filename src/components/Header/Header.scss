@@ -1,5 +1,6 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
 body{
     padding: 0;
@@ -7,6 +8,8 @@ body{
 }
 
 .header {
+
+    background-color: $fourth;
 
     &__nav{
         display: flex;
