@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import './App.scss'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage/HomePage';
+// import CocktailPage from './pages/CocktailPage/CocktailPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Header />
-      <Footer />
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        {/* Route for home page */}
+        <Route path="/" element={<HomePage />} />
+
+        {/* Route for specific page */}
+        {/* <Route path="/cocktail/:id" element={<CocktailPage />} /> */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
