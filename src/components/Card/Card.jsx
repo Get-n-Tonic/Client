@@ -29,7 +29,7 @@ const Card = ({
                 <div className="cocktail">
                     {/* display photo */}
                     <div className="cocktail__placeholder">
-                        <img src={cocktail.image_url} alt={cocktail.instructions} className="cocktail__image" />
+                        <img src={cocktail.image} alt={cocktail.instructions} className="cocktail__image" />
 
                         <div className="cocktail__ingredients cocktail__ingredients--responsive">
                             <ul>
@@ -53,7 +53,7 @@ const Card = ({
 
                     {/* display ingredients */}
                     <div className="cocktail__ingredients cocktail__ingredients--mobile">
-                        <ul>
+                        <ul className="cocktail__list">
                             {cocktail.ingredients.map((ingredient, index) => (
                                 <li key={index} className="cocktail__ingredient">
                                     {ingredient}
