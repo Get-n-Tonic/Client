@@ -18,3 +18,14 @@ export const getCocktails = async () => {
         throw error;
     }
 };
+
+export const getCocktailById = async (id) => {
+    try {
+        const response = await apiClient.get(`/cocktails/${id}`);
+
+        return response.data;
+    } catch (error) {
+        console.error(`Error fetching photo with ID ${id}:`, error);
+        throw error;
+    }
+};
