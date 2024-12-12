@@ -1,0 +1,16 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+
+.footer {
+
+    &__logo {
+        font-family: "MountainsofXmas";
+    }
+
+
+    &__social-media {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
