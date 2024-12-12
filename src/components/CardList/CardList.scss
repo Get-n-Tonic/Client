@@ -1,0 +1,20 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+
+.cards {
+    @include flex-style(center, center, left, wrap, column);
+    padding: 0 1rem;
+    padding-top: 1.5rem;
+    width: 100%;
+
+    @include media(tablet) {
+        @include flex-style(baseline, space-between, left, wrap, row);
+        gap: 3vw;
+        padding: 0 1.5rem;
+    }
+
+    @include media(desktop) {
+        gap: 1vw;
+        padding: 0 1.5rem 3rem 1.5rem;
+    }
+}
