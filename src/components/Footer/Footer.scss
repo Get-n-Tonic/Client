@@ -1,16 +1,40 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
 .footer {
 
+    padding: 0 1rem;
+
+
     &__logo {
         font-family: "MountainsofXmas";
+        font-size: 1.5rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: center;
+        }
     }
 
+    &__container {
+        align-items: flex-start;
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        
+    }
 
     &__social-media {
         display: flex;
         gap: 1rem;
-        justify-content: center;
+    }
+
+    &__copyright {
+        font-size: x-small;
     }
 }

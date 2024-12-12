@@ -1,4 +1,6 @@
 @use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
 body{
     padding: 0;
@@ -6,6 +8,8 @@ body{
 }
 
 .header {
+
+    background-color: $fourth;
 
     &__nav{
         display: flex;
@@ -15,9 +19,17 @@ body{
     &__logo {
         font-family: "MountainsofXmas";
         font-size: 2rem;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            font-size:3rem;
+        }
     }
 
-    &__home {
-        font-size: 2rem;
+    &__subtitle {
+        text-align: center;
     }
 }
