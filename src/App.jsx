@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage/HomePage';
+import HomePage from './pages/Homepage/HomePage';
 // import CocktailPage from './pages/CocktailPage/CocktailPage';
 
 function App() {
