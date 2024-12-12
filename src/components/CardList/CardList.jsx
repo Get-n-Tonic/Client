@@ -1,17 +1,7 @@
 import "./CardList.scss";
 import Card from "../Card/Card";
 
-const CardList = ({ cocktails, selectedCategory }) => {
-    let filteredCards = [];
-
-    // select cards include selected tag if there is selected tag
-    if (selectedCategory !== "") {
-        filteredCards = cocktails.filter((card) => {
-            return card.tags.includes(selectedCategory);
-        });
-    } else {
-        filteredCards = cocktails;
-    }
+const CardList = ({ cocktails }) => {
 
     return (
         <section className="cards">
