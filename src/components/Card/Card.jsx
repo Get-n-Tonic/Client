@@ -2,16 +2,14 @@ import { Link, useLocation } from "react-router-dom";
 import "./Card.scss";
 
 const Card = ({
-    cocktail,
-    selectedTag,
-    filterStatus,
+    cocktail
 }) => {
 
     return (
         <>
             {location.pathname === "/" ? (
                 // add "card__active" class to justify desktop view
-                <div className={`card ${filterStatus ? "card__active" : ""}`}>
+                <div className="card">
                     <Link to={`/cocktails/${cocktail.drink_id}`} className="card__link">
                         {/* display cocktail */}
                         <img src={cocktail.image_url} alt={cocktail.instructions} className="card__image" />
