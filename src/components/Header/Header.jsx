@@ -6,7 +6,10 @@ function Header () {
 return (
     <header className='header'>
         <section className='header__nav'>
-            <h1 className='header__logo'>Christmas Cocktail Creations &#x1F378;</h1>
+            <a href="/" className="header__logo">
+                Christmas Cocktail Creations &#x1F378;
+            </a>
+            
         </section>
         
         <h3 className='header__subtitle'>Explore The Art of Mixology</h3>
