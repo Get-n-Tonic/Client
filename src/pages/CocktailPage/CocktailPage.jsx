@@ -30,9 +30,11 @@ function CocktailPage() {
             <>
                 {/* header section */}
                 <Header />
-
-                {/* Render the Card component */}
-                <Card key={cocktail.id} cocktail={cocktail} />
+                <div className='content'>
+                    {/* Render the Card component */}
+                    <Card key={cocktail.id} cocktail={cocktail} />
+                </div>
+                
 
                 {/* footer section */}
                 <Footer />
