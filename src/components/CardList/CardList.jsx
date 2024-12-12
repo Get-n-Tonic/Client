@@ -7,7 +7,7 @@ const CardList = ({ cocktails }) => {
         <section className="cards">
 
             {/* map the selected cards and render card component */}
-            {filteredCards.map((item) => (
+            {cocktails.map((item) => (
                 <Card
                     key={item.id}
                     cocktail={item}

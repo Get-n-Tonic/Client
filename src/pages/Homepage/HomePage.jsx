@@ -3,25 +3,25 @@ import "./HomePage.scss"
 // import Header from '../../components/Header/Header';
 // import Footer from '../../components/Footer/Footer';
 import CardList from '../../components/CardList/CardList';
-import { getCocktails } from "../../api/routes";
+// import { getCocktails } from "../../api/routes";
 
 function HomePage() {
     const [cocktails, setCocktails] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("All");
 
     // fetch the photos using API endpoint
-    useEffect(() => {
-        const fetchCocktails = async () => {
-            try {
-                const Photos = await getCocktails();
-                setCocktails(Photos);
-            } catch (error) {
-                console.error("Error fetching photos:", error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchCocktails = async () => {
+    //         try {
+    //             const Photos = await getCocktails();
+    //             setCocktails(Photos);
+    //         } catch (error) {
+    //             console.error("Error fetching photos:", error);
+    //         }
+    //     };
 
-        fetchCocktails();
-    }, []);
+    //     fetchCocktails();
+    // }, []);
 
     const filteredCocktails  =
         selectedCategory === "All"
@@ -35,7 +35,7 @@ function HomePage() {
     return (
         <>
             {/* header section */}
-            <Header />
+            {/* <Header /> */}
             <div className='container'>
                 <div className="filter-bar">
                     <label htmlFor="category-filter">Filter by Category: </label>
@@ -56,7 +56,7 @@ function HomePage() {
             </div>
 
             {/* footer section */}
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
