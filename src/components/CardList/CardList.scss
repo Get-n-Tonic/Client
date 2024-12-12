@@ -5,6 +5,7 @@
     @include flex-style(center, center, left, wrap, column);
     padding: 0 1rem;
     padding-top: 1.5rem;
+    margin-top: 1.5rem;
     width: 100%;
 
     @include media(tablet) {
