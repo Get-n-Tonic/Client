@@ -4,7 +4,7 @@ import "./Card.scss";
 const Card = ({
     cocktail
 }) => {
-
+    const location = useLocation();
     return (
         <>
             {location.pathname === "/" ? (
