@@ -1,75 +1,87 @@
-@use '../../styles/partials/fonts' as *;
-@use '../../styles/partials/mixins' as *;
-
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 .card {
-    @include border-style(0.5rem, gray, black);
-    margin-bottom: 0.5rem;
+  @include border-style(0.5rem, $fourth, $third);
+  margin-bottom: 0.5rem;
+
+  @include media(tablet) {
+    width: 48%;
+    border-radius: 1rem;
+  }
+
+  @include media(desktop) {
+    width: 32%;
+    border-radius: 1rem;
+
+    &__active {
+      width: 48%;
+      text-decoration: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $fifth;
+  }
+
+  &__image {
+    display: block;
+    width: 75%;
+    height: fit-content;
+    @include border-style(0.5rem 0.5rem 0 0, unset, $third);
 
     @include media(tablet) {
-        width: 48%;
-        border-radius: 1rem;
+      border-radius: 1rem 1rem 0 0;
     }
+  }
 
-    @include media(desktop) {
-        width: 32%;
-        border-radius: 1rem;
+  &__placeholder {
+    text-decoration: none;
+    width: 100%;
+    justify-content: center;
+    @include flex-style(flex-end, center, right, wrap, column);
+  }
 
-        &__active {
-            width: 48%
-        }
+  &__cocktails {
+    text-align: center;
+    color: inherit;
+    width: fit-content;
+
+    // @include font-style(0.75rem, 0.938rem, 500, $fifth, MountainsofXmas);
+    padding: 0.5rem;
+
+    @include media(tablet) {
+      border-radius: 1rem 0 0 0;
+      //   @include font-style(0.875rem, 1.094rem, 500, black);
     }
+  }
 
-    &__image {
-        display: block;
-        width: 100%;
-        height: fit-content;
-        @include border-style(0.5rem 0.5rem 0 0, unset, gray);
+  &__holder {
+    background-color: $fourth;
+    @include flex-style(flex-start, center, center, wrap, row);
+    border-radius: 0 0 0.5rem 0.5rem;
 
-        @include media(tablet) {
-            border-radius: 1rem 1rem 0 0;
-        }
-
+    @include media(tablet) {
+      border-radius: 0 0 1rem 1rem;
     }
+  }
 
-    &__placeholder {
-        width: 100%;
-        @include flex-style(flex-end, center, right, wrap, column);
+  &__category {
+    // @include border-style(0.375rem, $second, black);
+    @include font-style(0.75rem, 0.938rem, 500, black);
+    padding: 0.375rem 0.5rem;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+
+    @include media(tablet) {
+      border-radius: 0.75rem;
+      @include font-style(0.875rem, 1.094rem, 500, black);
+      padding: 0.5rem 0.75rem;
+      margin: 0.75rem 0 0.75rem 0.75rem;
     }
-
-    &__cocktails {
-        width: fit-content;
-        @include font-style(0.75rem, 0.938rem, 500, black, "MountainsofXmas");
-        padding: 0.5rem;
-
-        @include media(tablet) {
-            border-radius: 1rem 0 0 0;
-            @include font-style(0.875rem, 1.094rem, 500, black);
-        }
-    }
-
-    &__holder {
-        background-color: gray;
-        @include flex-style(flex-start, center, center, wrap, row);
-        border-radius: 0 0 0.5rem 0.5rem;
-
-        @include media(tablet) {
-            border-radius: 0 0 1rem 1rem;
-        }
-    }
-
-    &__category {
-        @include border-style(0.375rem, gray, black);
-        @include font-style(0.75rem, 0.938rem, 500, black);
-        padding: 0.375rem 0.5rem;
-        margin: 0.5rem 0 0.5rem 0.5rem;
-
-        @include media(tablet) {
-            border-radius: 0.75rem;
-            @include font-style(0.875rem, 1.094rem, 500, black);
-            padding: 0.5rem 0.75rem;
-            margin: 0.75rem 0 0.75rem 0.75rem;
-        }
-    }
+  }
 }
-
