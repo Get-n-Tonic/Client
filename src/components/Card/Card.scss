@@ -220,12 +220,12 @@
 
   &__cocktails {
     width: fit-content;
-    @include font-style(0.75rem, 0.938rem, 500, white, "MountainsofXmas");
+    @include font-style(1.2rem, 0.938rem, 500, white, "MountainsofXmas");
     padding: 0.5rem;
 
     @include media(tablet) {
       border-radius: 1rem 0 0 0;
-      @include font-style(0.875rem, 1.094rem, 500, white);
+      @include font-style(1.75rem, 1.094rem, 500, white);
     }
   }
 
