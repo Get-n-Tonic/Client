@@ -1,4 +1,5 @@
-
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
 @mixin tablet {
     @media screen and (min-width: 768px) {
         @content;
@@ -9,4 +10,42 @@
     @media screen and (min-width: 1280px) {
         @content;
     }
+}
+
+@mixin media($keys...) {
+    @each $key in $keys {
+        @if ($key == tablet) {
+            @include tablet {
+            @content;
+            }
+        } @else if ($key == desktop) {
+            @include desktop {
+            @content;
+            }
+        }
+    }
+}
+
+
+@mixin border-style($radius, $bg-color, $border-color, $bd: 1px) {
+    background-color: $bg-color;
+    border: $bd solid $border-color;
+    border-radius: $radius;
+}
+
+@mixin flex-style($align, $justify, $text, $wrap, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    text-align: $text;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+}
+
+@mixin font-style($size, $height, $weight, $color, $style: normal) {
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    color: $color;
+    font-style: $style;
 }
