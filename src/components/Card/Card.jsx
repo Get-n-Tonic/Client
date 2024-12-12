@@ -10,9 +10,9 @@ const Card = ({
             {location.pathname === "/" ? (
                 // add "card__active" class to justify desktop view
                 <div className="card">
-                    <Link to={`/cocktails/${cocktail.drink_id}`} className="card__link">
+                    <Link to={`/cocktails/${cocktail.id}`} className="card__link">
                         {/* display cocktail */}
-                        <img src={cocktail.image_url} alt={cocktail.instructions} className="card__image" />
+                        <img src={cocktail.image} alt={cocktail.instructions} className="card__image" />
 
                         {/* display cocktail name */}
                         <article className="card__placeholder">
